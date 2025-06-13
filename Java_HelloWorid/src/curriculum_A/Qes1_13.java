@@ -53,7 +53,7 @@ public class Qes1_13 {
         System.out.println("好きな食べ物は" + food + "です");
         System.out.println("BMIは" + String.format("%.2f", bmi) + "です");
 
-        // ⑥ 再代入
+     // ⑥ 再代入
         name = "鈴木一郎";
         age = 24;
         height = 168.5;
@@ -69,17 +69,18 @@ public class Qes1_13 {
         System.out.println("BMIは" + String.format("%.1f", bmi) + "です");
 
         // ⑦ 自己代入（加算）
-        age += age;
         height += height;
+        age += age;
         weight += weight;
         bmi = weight / ((height / 100) * (height / 100));
 
-        System.out.println("初めまして" + name + "です");
-        System.out.println("年齢は" + age + "歳です");
-        System.out.println("身長は" + height + "cmです");
-        System.out.println("体重は" + weight + "kgです");
-        System.out.println("好きな食べ物は" + food + "です");
-        System.out.println("BMIは" + String.format("%.2f", bmi) + "です");
+        // 💡 ご希望のフォーマット（全角スペース入り）
+        System.out.println("初めまして" + name + "です　");
+        System.out.println("　年齢は" + age + "歳です　");
+        System.out.println("　身長は" + height + "cmです　");
+        System.out.println("　体重は" + weight + "kgです　");
+        System.out.println("　好きな食べ物は" + food + "です　");
+        System.out.println("　BMIは" + String.format("%.2f", bmi) + "です　");
 
         // ⑧ 25歳以上判定（if文なし）
         System.out.println(age >= 25);
