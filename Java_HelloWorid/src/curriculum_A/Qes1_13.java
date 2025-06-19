@@ -14,15 +14,15 @@ public class Qes1_13 {
         boolean bool;
 
         // ② 初期化（代入）
-        b = 10;
-        s = 100;
-        i = 1000;
-        l = 10000L;
-        f = 9.5f;
-        d = 10.5;
-        c = 'a';
-        str = "ハロー";
-        bool = true;
+        b = 0;
+        s = 0;
+        i = 0;
+        l = 0L;
+        f = 0.0f;
+        d = 0.0d;
+        c = '\u0000';
+        str = null;
+        bool = false;
 
         // ③ 出力
         System.out.println((b + s + i + l) + "\t\t" + (b + s + i + l));
