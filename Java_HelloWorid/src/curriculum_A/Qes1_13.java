@@ -25,6 +25,16 @@ public class Qes1_13 {
         bool = false;
 
         // ③ 出力
+        b = 10;
+        s = 100;
+        i = 1000;
+        l = 10000;
+        f = 9.5f;
+        d = 10.5d;
+        c = 'a';
+        str = "ハロー";
+        bool = true;
+        
         System.out.println((b + s + i + l) + "\t\t" + (b + s + i + l));
         System.out.println((b * 2) + "\t\t" + (b * 2));
         System.out.println(c + " " + str + " " + bool + "\t\t" + c + " " + str + " " + bool);
@@ -83,6 +93,9 @@ public class Qes1_13 {
         System.out.println("　BMIは" + String.format("%.2f", bmi) + "です　");
 
         // ⑧ 25歳以上判定（if文なし）
+        age = 24;
+        height = 168.5;
+        weight = 64.2;
         System.out.println(age >= 25);
 
         // ⑨ 文字列型に変換し連結
