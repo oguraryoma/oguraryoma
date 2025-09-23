@@ -1,5 +1,6 @@
 package curriculum_B;
 
+import java.util.Objects;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -8,24 +9,28 @@ public class Qes1_3 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in); // 入力用のオブジェクトを作成
 
-		String name = scanner.nextLine(); // 名前を入力
-		int number = name.length(); // 名前の長さを取得
+		String name = "";
+		while (true) {
 
-		// if文(名前のチェック)
-		if (number > 10) {
-			System.out.println("「名前を10文字以内にしてください」");
-			System.out.println();
-		} else if (name == null || name.length() <= 0) {
-			System.out.println("「名前を入力してください」");
-			System.out.println();
-		} else if (!name.matches("^[a-zA-Z0-9]+$")) {
-			System.out.println("「半角英数字のみで名前を入力してください」");
-			System.out.println();
-		} else {
-			System.out.println("ユーザー名「" + name + "」登録しました。");
+			name = scanner.nextLine(); // 名前を入力
+			int number = name.length(); // 名前の長さを取得
+			// if文(名前のチェック
+			if (name.length() == 0||Objects.isNull(name) || name.equals("")) {
+				System.out.println("「名前を入力してください」");
+				System.out.println();
+			} else if (number > 10) {
+				System.out.println("「名前を10文字以内にしてください」");
+				System.out.println();
+			} else if (!name.matches("^[a-zA-Z0-9]+$")) {
+				System.out.println("「半角英数字のみで名前を入力してください」");
+				System.out.println();
+			} else {
+				System.out.println("ユーザー名「" + name + "」登録しました。");
+				break;
+			}
 		}
 
-		// じゃんけん処理
+		// じゃんけん処理（名前登録が成功した場合のみ実行）
 		String[] hands = { "グー", "チョキ", "パー" };
 		Random random = new Random();
 
@@ -72,5 +77,6 @@ public class Qes1_3 {
 
 		//最後に勝つまでの回数を表示
 		System.out.println("勝つまでにかかった合計回数は" + count + "回です");
+		scanner.close();
 	}
 }

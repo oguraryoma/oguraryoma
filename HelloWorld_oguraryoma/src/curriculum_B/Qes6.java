@@ -45,6 +45,7 @@ public class Qes6 {
 				System.out.println("「" + item + "」は指定の商品ではありません");
 			}
 			System.out.println();
+			scanner.close();
 		}
 	}
 }
