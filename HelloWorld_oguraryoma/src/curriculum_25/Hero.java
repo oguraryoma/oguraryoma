@@ -7,7 +7,7 @@ public class Hero extends Player {
 	private static final Random random = new Random();
 
 	public Hero(String name) {
-		super(
+		super(j
 				name,
 				getRandom(500, 1000),
 				getRandom(300, 900),
