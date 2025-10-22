@@ -26,4 +26,3 @@ public class Player {
 		System.out.println("防御力：" + defense);
 	}
 }
-//k
