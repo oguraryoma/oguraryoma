@@ -16,9 +16,11 @@ public class AnimalFormatter {
         Scanner sc = new Scanner(System.in, "UTF-8");
         System.out.println("コンソールに文字を入力してください");
         String line = sc.nextLine().trim();
-        sc.close();
 
-        if (line.isEmpty()) return;
+        if (line.isEmpty()) {
+            sc.close();
+            return;
+        }
 
         String[] entries = line.split("\\s*,\\s*");
         for (int i = 0; i < entries.length; i++) {
@@ -37,8 +39,6 @@ public class AnimalFormatter {
 
             if (i != entries.length - 1) System.out.println();
         }
+        sc.close();
     }
 }
-
-
-
